@@ -1,0 +1,29 @@
+@font-face {
+  font-family: MuseoRegular;
+  src: url(../fonts/MuseoSans_500.otf);
+}
+
+@font-face {
+  font-family: MuseoRegularItalic;
+  src: url(../fonts/MuseoSans_500_Italic.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  .navbar-ul {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
