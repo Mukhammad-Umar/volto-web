@@ -5,16 +5,16 @@
     <div class="desktop-nav">
       <ul class="navbar-ul">
         <li>
-          <a>Каталог</a>
+          <a class="link--animated">Каталог</a>
         </li>
         <li>
-          <a>Новости</a>
+          <a class="link--animated">Новости</a>
         </li>
         <li>
-          <a>Контакты</a>
+          <a class="link--animated">Контакты</a>
         </li>
         <li>
-          <a>О компании</a>
+          <a class="link--animated">О компании</a>
         </li>
       </ul>
     </div>

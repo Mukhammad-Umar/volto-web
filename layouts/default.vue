@@ -5,7 +5,7 @@
 <template>
   <v-layout>
     <v-app-bar color="black" class="px-5">
-      <v-app-bar-title>
+      <v-app-bar-title style="flex: none;">
         {{ $t('main') }}
         <!-- <v-img src="/assets/images/volto.jpg" width="45" /> -->
       </v-app-bar-title>
