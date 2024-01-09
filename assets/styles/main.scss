@@ -27,7 +27,8 @@ nav {
       cursor: pointer;
       list-style: none;
       a {
-        font-size: 16px;
+        font-size: 18px;
+        // font-family: MuseoRegular, sans-serif;
       }
 
       .link--animated {
@@ -49,29 +50,29 @@ nav {
           width: 100%;
           //transition: width .3s;
       }
-      // .link--animated {
-      //   display: block;
-      //   position: relative;
-      //   width: max-content;
-      // }
-      // .link--animated:after {
-      //   content: "";
-      //   position: absolute;
-      //   bottom: 2px;
-      //   left: 0;
-      //   width: 100%;
-      //   height: 1px;
-      //   background: white;
-      //   transform: scaleX(0);
-      //   transform-origin: right;
-      //   transition: transform .3s;
-      // }
-      // .link--animated:hover::after {
-      //   width: 100%;
-      // }
     }
     li:not(:last-child) {
       margin-right: 32px;
+    }
+  }
+}
+
+.main-carousel {
+  .v-window__controls {
+    .v-btn {
+      border: 1px solid #9b9b9b;
+      background-color: transparent !important;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      i {
+        color: #9b9b9b;
+      }
+    }
+
+    .v-btn:hover {
+      border-color: white;
+      i {
+        color: white;
+      }
     }
   }
 }

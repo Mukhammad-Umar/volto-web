@@ -28,6 +28,7 @@ export default defineNuxtConfig({
   css: ['~/assets/styles/main.scss'],
   components: [
     // ~/calendar-module/components/event/Update.vue => <EventUpdate />
+    { path: '~/components' },
     { path: '~/layouts/components' }
 
     // ~/user-module/components/account/UserDeleteDialog.vue => <UserDeleteDialog />
