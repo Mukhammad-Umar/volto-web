@@ -3,5 +3,7 @@
 <template>
   <div class="">
     <PartialsMainCarousel />
+    <PartialsGoodsCarousel />
+    <PartialsTheFooter />
   </div>
 </template>

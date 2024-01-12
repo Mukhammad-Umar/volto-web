@@ -31,7 +31,7 @@
       </v-btn>
     </v-app-bar>
 
-    <v-main style="--v-layout-left: 0" class="mt-2 bg-black">
+    <v-main style="--v-layout-left: 0" class="mt-2">
       <NuxtPage />
     </v-main>
   </v-layout>
