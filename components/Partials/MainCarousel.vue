@@ -8,10 +8,10 @@ const slides = ref([
 </script>
 
 <template>
-  <div class="main-carousel-comp bg-black pb-5">
-    <v-carousel height="600" class="main-carousel" hide-delimiter-background cover cycle>
+  <div class="main-carousel-comp bg-black pb-3">
+    <v-carousel height="460" class="main-carousel" hide-delimiter-background cover> 
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
-        <v-img :src="slide.image" width="100%" height="100%" />
+        <v-img :src="slide.image" />
       </v-carousel-item>
     </v-carousel>
   </div>

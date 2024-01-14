@@ -49,7 +49,7 @@ const products = ref([
 
 <template>
   <div class="goods-sections mb-4">
-    <v-row class="w-100 justify-center steps_content mt-5">
+    <v-row class="w-100 justify-center steps_content mt-5 mx-0">
       <v-col cols="12" lg="11" md="11" sm="11">
         <swiper
           class="swiper goods-swiper nav_buttons w-100"
@@ -67,18 +67,17 @@ const products = ref([
             class="slide popular-goods pa-4 d-flex flex-nowrap flex-column justify-space-around"
             v-for="(product, index) in products" :key="index"
           >
-            <!-- <div class="title d-flex align-center">
-              <v-img :src="product.logo" max-width="43" />
-              <span class="ml-3">{{ product.brand }}</span>
-            </div> -->
+            <div class="title d-flex align-center">
+              <span class="ml-3">{{ product.type }}</span>
+            </div>
 
             <div class="good-image mx-auto">
               <v-img :src="product.image" class="w-100"/>
             </div>
 
             <div class="good-description mb-4">
-              <p class="mb-3">{{ product.type }}</p>
-              <h5>{{ product.description }}</h5>
+              <!-- <p class="mb-3">{{ product.type }}</p> -->
+              <h5 class="text-center">{{ product.description }}</h5>
             </div>
 
             <v-btn class="product-item-btn br-10">
