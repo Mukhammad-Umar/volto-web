@@ -8,6 +8,21 @@
   src: url(../fonts/MuseoSans_500_Italic.otf);
 }
 
+@font-face {
+  font-family: PoppinsLight;
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: PoppinsMedium;
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: PoppinsRegular;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+
 :root {
   --bg-main: #ffffff;
   --bg-black: #212121;
@@ -27,6 +42,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: PoppinsRegular, sans-serif;
 }
 
 a {
@@ -299,4 +318,419 @@ nav {
 
 .app-market span {
   color: var(--text-white);
+}
+
+
+/* ================ THE NEWS =================== */
+.content_title {
+  font-size: 16px;
+  color: var(--ctn-title);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content_info {
+  line-height: 53px;
+  font-family: InterBold, serif;
+  font-size: 44px;
+  color: var(--text-color);
+  margin: 12px 0;
+  text-align: center;
+}
+
+.bg-light-dark {
+  background: var(--bg-main);
+}
+
+.steps-img {
+  width: 90px;
+  height: 90px;
+}
+
+.rotated_dots {
+  display: flex;
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-size: 90% 95%;
+  background-position: center;
+}
+
+.line_top_bottom {
+  background-image: url(../../public/images/lineBotHigh.svg);
+}
+
+.line_bottom_top {
+  background-image: url(../../public/images/lineHighBot.svg);
+}
+
+.steps_content h5 {
+  font-size: 18px;
+  color: var(--text-color);
+  font-family: InterSemiBold, serif;
+  margin: 0 0 8px 0;
+  line-height: 25px;
+}
+
+.steps_content p {
+  color: var(--inactive-color);
+}
+
+
+/* ================ FOOTER =================== */
+/* line 1, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: #000000; // 001d38
+}
+
+/* line 7, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  /* line 7, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .footer_top {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 14, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .footer_top .footer_widget {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 14, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .footer_top .footer_widget {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 21, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .footer_title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  /* line 21, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .footer_top .footer_widget .footer_title {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 31, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .footer_logo {
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  /* line 31, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .footer_top .footer_widget .footer_logo {
+    margin-bottom: 20px;
+  }
+}
+
+/* line 41, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p {
+  color: #d5d5d5;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* line 47, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p a {
+  color: #919191;
+}
+
+/* line 49, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p a:hover {
+  color: #ffe8c3;
+}
+
+/* line 55, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text {
+  font-size: 16px;
+  color: #b2b2b2;
+  margin-bottom: 23px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* line 61, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text a.domain {
+  color: #b2b2b2;
+  font-weight: 400;
+}
+
+/* line 64, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text a.domain:hover {
+  color: #ffe8c3;
+  border-bottom: 1px solid #ffe8c3;
+}
+
+/* line 70, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text.doanar a {
+  font-weight: 500;
+  color: #b2b2b2;
+}
+
+/* line 74, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text.doanar a:hover {
+  color: #ffe8c3;
+  border-bottom: 1px solid #ffe8c3;
+}
+
+/* line 78, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget p.footer_text.doanar a.first {
+  margin-bottom: 10px;
+}
+
+/* line 86, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget ul li {
+  color: #d5d5d5;
+  font-size: 13px;
+  line-height: 38px;
+}
+
+/* line 90, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget ul li a {
+  font-size: 14px;
+  color: #d5d5d5;
+  font-weight: 400;
+}
+
+/* line 93, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget ul li a:hover {
+  color: #ffe8c3;
+}
+
+/* line 99, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* line 102, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  border: 1px solid #334a60;
+  border-radius: 30px;
+  padding-right: 130px;
+}
+
+/* line 113, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form input::placeholder {
+  font-size: 15px;
+  color: #919191;
+}
+
+/* line 117, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form input:focus {
+  outline: none;
+}
+
+/* line 121, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  border: none;
+  font-size: 14px;
+  color: #001d38;
+  background: #ffe8c3;
+  padding: 10px;
+  padding: 0 22px;
+  cursor: pointer;
+  border-radius: 30px;
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* line 140, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .footer_top .footer_widget .newsletter_text {
+  font-size: 13px;
+  color: #d5d5d5;
+  line-height: 24px;
+}
+
+/* line 147, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .copy-right_text {
+  padding-bottom: 20px;
+}
+
+/* line 149, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .copy-right_text .footer_border {
+  border-top: 1px solid #e8e8e8;
+  padding-bottom: 20px;
+}
+
+/* line 153, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .copy-right_text .copy_right {
+  font-size: 14px;
+  color: #919191;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  /* line 153, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .copy-right_text .copy_right {
+    font-size: 13px;
+  }
+}
+
+/* line 161, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .copy-right_text .copy_right a {
+  color: #ffe8c3;
+}
+
+/* line 166, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .socail_links {
+  margin-top: 47px;
+}
+
+@media (max-width: 767px) {
+  /* line 166, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .socail_links {
+    margin-top: 20px;
+  }
+}
+
+/* line 172, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .socail_links ul li {
+  display: inline-block;
+}
+
+/* line 175, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .socail_links ul li a {
+  font-size: 15px;
+  color: #c3b2f0;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  line-height: 40px !important;
+  margin-right: 7px;
+  color: #ffffff;
+  line-height: 40px !important;
+  border: 1px solid #e8e8e8;
+  color: #e8e8e8;
+}
+
+/* line 190, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .socail_links ul li a:hover {
+  color: #fff !important;
+  background: #ffe8c3;
+  border-color: transparent;
+}
+
+/* line 200, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .query_area .bottom_border {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #334a60;
+}
+
+/* line 205, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .query_area .query_text {
+  margin-bottom: 20px;
+}
+
+/* line 207, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .query_area .query_text h3 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 52px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  /* line 207, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .query_area .query_text h3 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 217, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .query_area .query_text h3 br {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 217, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .query_area .query_text h3 br {
+    display: none;
+  }
+}
+
+/* line 225, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .query_area .query_text h3 a {
+  color: #ffd35a;
+}
+
+/* line 227, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .query_area .query_text h3 a:hover {
+  text-decoration: underline;
+}
+
+/* line 233, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .query_area .query_number {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  /* line 233, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  .footer .query_area .query_number {
+    text-align: left;
+  }
+}
+
+/* line 239, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .query_area .query_number h3 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+/* line 246, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+.footer .query_area .query_number p a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
 }
