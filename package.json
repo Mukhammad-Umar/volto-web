@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
-    "swiper": "^8.4.7",
-    "vue-awesome-swiper": "^5.0.1"
+    "swiper": "^8.4.7"
   }
 }
