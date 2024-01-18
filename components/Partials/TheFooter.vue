@@ -33,7 +33,7 @@ const phoneNumber = ref('')
             <div class="footer_widget">
               <div class="footer_logo">
                 <a href="#">
-                  <img src="/_nuxt/assets/images/volto.jpg" alt="" width="100" />
+                  <v-img :src="'/_nuxt/assets/images/volto.jpg'" width="100" />
                 </a>
               </div>
               <p>
@@ -54,7 +54,7 @@ const phoneNumber = ref('')
                   </li>
                   <li>
                     <a href="#" class="flex-center">
-                      <v-img src="/_nuxt/assets/images/socials/tg.svg" max-width="19" class="ti-twitter-alt" />
+                      <v-img :src="'/_nuxt/assets/images/socials/tg.svg'" max-width="19" class="ti-twitter-alt" />
                     </a>
                   </li>
                 </ul>

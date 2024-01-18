@@ -23,6 +23,26 @@
   src: url(../fonts/Poppins-Regular.ttf);
 }
 
+@font-face {
+  font-family: InterRegular;
+  src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: InterMedium;
+  src: url(../fonts/Inter/Inter-Medium.ttf);
+}
+
+@font-face {
+  font-family: InterBold;
+  src: url(../fonts/Inter/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: InterSemiBold;
+  src: url(../fonts/Inter/Inter-SemiBold.ttf);
+}
+
 :root {
   --bg-main: #ffffff;
   --bg-black: #212121;
@@ -145,6 +165,13 @@ nav {
 .steps_content h5 {
   font-size: 18px;
   color: var(--text-color);
+  font-family: InterSemiBold, serif;
+  margin: 0 0 8px 0;
+  line-height: 25px;
+}
+
+.steps_content h6 {
+  font-size: 20px;
   font-family: InterSemiBold, serif;
   margin: 0 0 8px 0;
   line-height: 25px;
@@ -361,18 +388,6 @@ nav {
 
 .line_bottom_top {
   background-image: url(../../public/images/lineHighBot.svg);
-}
-
-.steps_content h5 {
-  font-size: 18px;
-  color: var(--text-color);
-  font-family: InterSemiBold, serif;
-  margin: 0 0 8px 0;
-  line-height: 25px;
-}
-
-.steps_content p {
-  color: var(--inactive-color);
 }
 
 

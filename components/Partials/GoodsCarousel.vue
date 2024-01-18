@@ -11,36 +11,42 @@ const products = ref([
   {
     image: '/_nuxt/assets/images/popular-goods/tv-55.jpg',
     type: 'Телевизор',
+    price: '4 989 000',
     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
   },
   {
     image: '/_nuxt/assets/images/popular-goods/tv-65.jpg',
     type: 'Телевизор',
+    price: '5 999 000',
     description: 'Televizor VOLTO LED 65VUW-9000 Smart',
     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
   },
   {
     image: '/_nuxt/assets/images/popular-goods/headphone.svg',
     type: 'Ноутбуки',
+    price: '2 989 000',
     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
   },
   {
     image: '/_nuxt/assets/images/popular-goods/mouse.svg',
     type: 'Ноутбуки',
+    price: '4 123 000',
     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
   },
   {
     image: '/_nuxt/assets/images/popular-goods/pc-headphone.svg',
     type: 'Ноутбуки',
+    price: '1 433 000',
     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
   },
   {
     image: '/_nuxt/assets/images/popular-goods/watch2.svg',
     type: 'Ноутбуки',
+    price: '4 989 000',
     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
   },
@@ -67,17 +73,20 @@ const products = ref([
             class="slide popular-goods pa-4 d-flex flex-nowrap flex-column justify-space-around"
             v-for="(product, index) in products" :key="index"
           >
-            <div class="title d-flex align-center">
+            <!-- <div class="title d-flex align-center">
               <span class="ml-3">{{ product.type }}</span>
-            </div>
+            </div> -->
 
             <div class="good-image w-100 flex-center">
               <v-img :src="product.image" />
             </div>
 
-            <div class="good-description mb-4">
-              <!-- <p class="mb-3">{{ product.type }}</p> -->
+            <div class="good-description mb-3">
               <h5 class="text-center">{{ product.description }}</h5>
+            </div>
+
+            <div class="good-description mb-3">
+              <h6 class="text-info text-center mb-3">{{ product.price }} сўм</h6>
             </div>
 
             <v-btn class="product-item-btn br-10">
