@@ -11,7 +11,7 @@ const slides = ref([
   <div class="main-carousel-comp bg-black">
     <v-carousel class="main-carousel" height="550" hide-delimiter-background cycle cover>
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
-        <v-img :src="slide.image" max-width="91%" max-height="470" class="main-carousel-img my-7 mx-auto" cover />
+        <v-img :src="slide.image" max-width="91%" max-height="470" class="main-carousel-img my-7 mx-auto" />
       </v-carousel-item>
     </v-carousel>
   </div>
@@ -28,6 +28,9 @@ const slides = ref([
       rgb(255 255 255 / 3%) 0px 4px 6px, 
       rgb(255 255 255 / 5%) 0px 12px 13px, 
       rgb(255 255 255 / 9%) 0px -3px 5px;
+      img {
+        object-fit: fill;
+      }
   }
 }
 </style>
