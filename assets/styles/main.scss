@@ -391,6 +391,118 @@ nav {
 }
 
 
+/* ================ SINGLE PRODUCT ================= */
+.quick-view-images {
+  img {
+    border-radius: 10px;
+  }
+  .quick-gallery-images {
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #e7e7e7;
+      background-color: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      -webkit-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      transition: all .3s linear;
+      outline: none;
+      opacity: 0.6;
+      margin-top: 0;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .swiper-button-prev:after, 
+    .swiper-button-next:after {
+      font-size: 14px;
+      font-weight: 600;
+      color: #000000;
+    }
+  }
+
+  .quick-gallery-thumbs {
+    position: relative;
+    .swiper-slide {
+      opacity: .5;
+      cursor: pointer;
+    }
+
+    .swiper-slide.swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+}
+
+.quick-view-description {
+  .product-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0;
+  }
+
+  .price {
+    .sale-price {
+      font-size: 24px;
+      font-weight: 500;
+      margin-top: 5px;
+      font-family: InterSemiBold, sans-serif;
+    }
+
+    .old-price {
+      font-size: 20px;
+      font-family: InterSemiBold, sans-serif;
+      color: #a4a4a4;
+      margin-top: 4px;
+      margin-left: 10px;
+      text-decoration: line-through;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #6c788c;
+    margin-bottom: 0;
+  }
+
+  .product-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+  }
+
+  .product-info {
+    padding-top: 25px;
+    .single-info {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 8px;
+      .label {
+        color: #3f3d3d;
+        font-size: 16px;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 600;
+        margin-right: 5px;
+      }
+      .value {
+        color: #9f9e9e;
+        font-size: 16px;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+
 /* ================ FOOTER =================== */
 /* line 1, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
 .footer {
