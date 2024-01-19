@@ -38,7 +38,7 @@ const news = ref([
     title: 'Заголовок новости!',
     description:
       'Задача организации, в особенности же рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! сложившаяся структура...',
-    date: '18 август 2023',
+    date: '10 август 2023',
   },
 ])
 
@@ -69,8 +69,7 @@ const threeDots = (text) => {
           }"
         >
           <swiper-slide
-            v-for="(oneNews, index) in news"
-            :key="index"
+            v-for="(oneNews, index) in news" :key="index"
             class="pa-5 news-content-item d-flex flex-nowrap flex-column justify-space-between br-10"
           >
             <div class="d-flex flex-column align-center">
@@ -100,31 +99,27 @@ const threeDots = (text) => {
   </v-row>
 </template>
 
-<style scoped>
-.news-content {
-  width: 100%;
-}
-
+<style lang="scss">
 .news-content-item {
   border: 1px solid var(--white-mute);
   width: 400px !important;
   height: 484px !important;
+
+  h5 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin: 20px 0 14px 0;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--inactive-color);
+  }
 }
 
 .news-content-item:not(:last-child) {
   margin-right: 20px;
-}
-
-.news-content-item h5 {
-  font-size: 24px;
-  color: var(--text-color);
-  margin: 20px 0 14px 0;
-}
-
-.news-content-item p {
-  font-weight: 400;
-  font-size: 14px;
-  color: var(--inactive-color);
 }
 
 .news-content_bottom span {
