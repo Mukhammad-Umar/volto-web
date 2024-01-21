@@ -84,7 +84,10 @@ const threeDots = (text) => {
               <span class="d-flex align-center">
                 {{ oneNews.date }}
               </span>
-              <v-btn icon density="compact" variant="text" class="text-info">
+              <v-btn
+                icon density="compact" variant="text" class="text-info"
+                @click="$router.push({ name: 'news', params: { id: oneNews.id } })"
+              >
                 <v-icon size="20">mdi-arrow-right</v-icon>
               </v-btn>
             </div>
