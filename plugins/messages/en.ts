@@ -4,4 +4,5 @@ export default {
   news: 'News',
   contacts: 'Contacts',
   about: 'About',
+  back: 'Back'
 }

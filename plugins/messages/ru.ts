@@ -4,4 +4,5 @@ export default {
   news: 'Новости',
   contacts: 'Контакты',
   about: 'О компании',
+  back: 'Назад'
 }

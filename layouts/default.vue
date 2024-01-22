@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <v-layout>
+  <v-layout class="flex-column">
     <v-app-bar color="black" class="px-5 py-1">
       <v-app-bar-title style="flex: none;">
         {{ $t('main') }}
@@ -34,5 +34,7 @@
     <v-main style="--v-layout-left: 0" class="mt-2">
       <NuxtPage />
     </v-main>
+
+    <TheFooter />
   </v-layout>
 </template>

@@ -4,4 +4,5 @@ export default {
   news: 'Xabarlar',
   contacts: 'Bog`lanish',
   about: 'Kompaniya haqida',
+  back: 'Orqaga'
 }

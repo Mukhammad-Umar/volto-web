@@ -5,6 +5,5 @@
     <PartialsMainCarousel />
     <PartialsGoodsCarousel />
     <PartialsTheNews />
-    <PartialsTheFooter />
   </div>
 </template>
