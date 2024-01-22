@@ -522,15 +522,11 @@ nav {
 @media (max-width: 767px) {
   /* line 7, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
   .footer .footer_top {
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
-}
-
-@media (max-width: 767px) {
-  /* line 14, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
+  
   .footer .footer_top .footer_widget {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 
@@ -660,7 +656,7 @@ nav {
   height: 50px;
   background: transparent;
   padding-left: 20px;
-  font-size: 15px;
+  font-size: 14px;
   color: #fff;
   border: none;
   border: 1px solid #334a60;
@@ -739,7 +735,7 @@ nav {
 
 /* line 166, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
 .footer .socail_links {
-  margin-top: 47px;
+  margin-top: 30px;
 }
 
 @media (max-width: 767px) {
@@ -808,19 +804,13 @@ nav {
     font-size: 20px;
     line-height: 32px;
   }
-}
-
-@media (max-width: 767px) {
-  /* line 217, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
-  .footer .query_area .query_text h3 br {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 217, ../../Arafath/CL/Cl November/224. Interior Design/HTML/scss/_footer.scss */
-  .footer .query_area .query_text h3 br {
-    display: none;
+  .footer .query_area .query_number {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h3 {
+      font-size: 20px !important;
+    }
   }
 }
 
@@ -860,4 +850,50 @@ nav {
   font-size: 16px;
   font-weight: 400;
   color: #ffffff;
+}
+
+@media (max-width: 960px) {
+  .footer .footer_top .footer_widget .newsletter_form {
+    max-width: 450px;
+  }
+
+  .footer .footer_top .footer_widget .newsletter_form input::placeholder {
+    font-size: 14px;
+  }
+  
+  .footer_useful_links {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-sections {
+    .content_info {
+      font-size: 32px;
+      line-height: 30px;
+    }
+
+    .news-content-item {
+      h5 {
+        margin-top: 10px;
+      }
+      width: 300px !important;
+      height: 440px !important;
+    }
+  } 
+
+  .footer .footer_top .footer_middle_left {
+    display: flex;
+    justify-content: space-evenly;
+    .footer_logo {
+      margin-right: 8px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .footer .query_area .query_text h3,
+  .footer .query_area .query_number h3 {
+    font-size: 16px !important;
+  }
 }
