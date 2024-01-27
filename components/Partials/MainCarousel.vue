@@ -9,9 +9,9 @@ const slides = ref([
 
 <template>
   <div class="main-carousel-comp bg-black">
-    <v-carousel class="main-carousel" height="550" hide-delimiter-background cycle cover>
+    <v-carousel class="main-carousel" height="auto" hide-delimiter-background cover> <!-- cycle -->
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
-        <v-img :src="slide.image" max-width="91%" max-height="470" class="main-carousel-img my-7 mx-auto" />
+        <v-img :src="slide.image" max-width="91%" class="main-carousel-img mt-7 mb-13 mx-auto" />
       </v-carousel-item>
     </v-carousel>
   </div>
@@ -31,6 +31,60 @@ const slides = ref([
       img {
         object-fit: fill;
       }
+  }
+}
+
+@media (max-width: 600px) {
+  .main-carousel {
+    .main-carousel-img {
+      margin-bottom: 40px !important;
+    }
+    .v-window__controls .v-btn {
+      width: 30px !important;
+      height: 30px !important;
+      i::before {
+        font-size: 18px;
+      }
+    }
+
+    .v-carousel__controls .v-btn {
+      width: 20px !important;
+      height: 20px !important;
+      i::before {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main-carousel {
+    .main-carousel-img {
+      margin-bottom: 25px !important;
+    }
+
+    .v-window__controls .v-btn {
+      width: 20px !important;
+      height: 20px !important;
+      .v-btn__content {
+        height: 18px;
+        i::before {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .v-carousel__controls .v-btn {
+      width: 16px !important;
+      height: 16px !important;
+      i::before {
+        font-size: 10px;
+      }
+    }
+
+    .v-carousel__controls {
+      height: 30px;
+    }
   }
 }
 </style>

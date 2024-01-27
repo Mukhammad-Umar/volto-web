@@ -124,3 +124,12 @@ const viewProduct = (id: number) => {
     />
   </div>
 </template>
+
+<style lang="scss">
+.goods-sections {
+  padding-top: 10px;
+  .steps_content {
+    margin-top: 10px !important;
+  }
+}
+</style>
