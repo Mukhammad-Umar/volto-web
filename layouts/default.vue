@@ -1,12 +1,33 @@
 <script lang="ts" setup>
+const drawer = ref(false)
 
+const items = ref([
+  {
+    title: 'Foo',
+    value: 'foo',
+  },
+  {
+    title: 'Bar',
+    value: 'bar',
+  },
+  {
+    title: 'Fizz',
+    value: 'fizz',
+  },
+  {
+    title: 'Buzz',
+    value: 'buzz',
+  },
+])
 </script>
 
 <template>
-  <v-layout class="flex-column">
-    <v-app-bar color="black" class="px-5 py-1">
+  <div class="flex-column">
+    <v-app-bar prominent color="black" class="px-5 py-1">
+      <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+
       <v-app-bar-title style="flex: none;">
-        {{ $t('main') }}
+        Volto
         <!-- <v-img src="/assets/images/volto.jpg" width="45" /> -->
       </v-app-bar-title>
 
@@ -31,10 +52,20 @@
       </v-btn>
     </v-app-bar>
 
+    <v-navigation-drawer
+        v-model="drawer"
+        location="left"
+        temporary
+      >
+        <v-list
+          :items="items"
+        ></v-list>
+      </v-navigation-drawer>
+
     <v-main style="--v-layout-left: 0" class="mt-2">
       <NuxtPage />
     </v-main>
 
     <TheFooter />
-  </v-layout>
+  </div>
 </template>
