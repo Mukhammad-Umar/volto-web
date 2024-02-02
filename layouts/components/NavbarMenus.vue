@@ -2,19 +2,19 @@
 
 <template>
   <nav>
-    <div class="desktop-nav">
+    <div>
       <ul class="navbar-ul">
         <li>
-          <a class="link--animated">{{ $t('catalog') }}</a>
+          <a class="link--animated" href="#main-carousel">{{ $t('main') }}</a>
         </li>
         <li>
-          <a class="link--animated">{{ $t('news') }}</a>
+          <a class="link--animated" href="#goods-scroll">{{ $t('products') }}</a>
         </li>
         <li>
-          <a class="link--animated">{{ $t('contacts') }}</a>
+          <a class="link--animated" href="#news-scroll">{{ $t('news') }}</a>
         </li>
         <li>
-          <a class="link--animated">{{ $t('about') }}</a>
+          <a class="link--animated" href="#main-footer">{{ $t('contacts') }}</a>
         </li>
       </ul>
     </div>

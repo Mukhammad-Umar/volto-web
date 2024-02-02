@@ -68,7 +68,7 @@ const viewProduct = (id: number) => {
 
 <template>
   <div class="goods-sections mb-4">
-    <v-row class="w-100 justify-center steps_content mt-5 mx-2">
+    <v-row class="w-100 justify-center steps_content position-relative mt-5 mx-2">
       <v-col cols="12" lg="11" md="11" sm="12">
         <swiper
           class="swiper goods-swiper nav_buttons w-100"
@@ -115,6 +115,8 @@ const viewProduct = (id: number) => {
           <div class="swiper-button-next"></div>
         </swiper>
       </v-col>
+
+      <div id="news-scroll"></div>
     </v-row>
 
     <DialogsSingleProduct

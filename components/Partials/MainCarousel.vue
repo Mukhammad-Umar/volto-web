@@ -8,12 +8,16 @@ const slides = ref([
 </script>
 
 <template>
-  <div class="main-carousel-comp bg-black">
+  <div class="main-carousel-comp position-relative bg-black">
+    <div id="main-carousel"></div>
+
     <v-carousel class="main-carousel" height="auto" hide-delimiter-background cover> <!-- cycle -->
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-img :src="slide.image" max-width="91%" class="main-carousel-img mt-7 mb-13 mx-auto" />
       </v-carousel-item>
     </v-carousel>
+
+    <div id="goods-scroll"></div>
   </div>
 </template>
 

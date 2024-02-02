@@ -24,7 +24,7 @@ const items = ref([
 <template>
   <div class="flex-column">
     <v-app-bar prominent color="black" class="px-5 py-1">
-      <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="mobile-nav-icon" variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-app-bar-title style="flex: none;">
         Volto
@@ -33,7 +33,7 @@ const items = ref([
 
       <v-spacer></v-spacer>
 
-      <NavbarMenus />
+      <NavbarMenus class="desktop-nav" />
 
       <v-spacer></v-spacer>
 
@@ -53,19 +53,19 @@ const items = ref([
     </v-app-bar>
 
     <v-navigation-drawer
-        v-model="drawer"
-        location="left"
-        temporary
-      >
-        <v-list
-          :items="items"
-        ></v-list>
-      </v-navigation-drawer>
+      v-model="drawer"
+      location="left"
+      temporary
+    >
+      <v-list
+        :items="items"
+      ></v-list>
+    </v-navigation-drawer>
 
     <v-main style="--v-layout-left: 0" class="mt-2">
       <NuxtPage />
     </v-main>
 
-    <TheFooter />
+    <TheFooter id="main-footer" />
   </div>
 </template>
