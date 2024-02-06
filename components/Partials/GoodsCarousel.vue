@@ -7,6 +7,7 @@ import 'swiper/css/navigation'
 
 const productId = ref(0)
 const modules = [Navigation]
+const api = useNuxtApp().$api
 const viewDialog = reactive({ dialog: false })
 
 const products = ref([
@@ -60,10 +61,19 @@ const products = ref([
   },
 ])
 
+async function getProducts() {
+  const { data } = await api.get('api/products/getProducts')
+  console.log(data);
+}
+
 const viewProduct = (id: number) => {
   productId.value = id
   viewDialog.dialog = true
 }
+
+onMounted(() => {
+  getProducts()
+})
 </script>
 
 <template>
