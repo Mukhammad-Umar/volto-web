@@ -24,6 +24,7 @@ const thumbsSwiper = ref(null)
 const api: any = useNuxtApp().$api
 const viewDialog = ref(props.viewDialog)
 
+const carouselImg = ref([])
 const productInfos: any = ref([])
 
 watch(() => props.viewDialog.dialog, val => {
@@ -38,12 +39,13 @@ const setThumbsSwiper = (swiper: any) => {
 const viewProduct = async () => {
   const { data } = await api.get(`api/products/getProductById/${props.productId}`)
   product.value = data
+  carouselImg.value = product.value.carouselImg?.split('; ')
   productInfos.value = product.value.characteristic_ru.split('. ')
 }
 </script>
 
 <template>
-  <v-dialog v-model="viewDialog.dialog" :scroll-strategy="'close'" class="single-product-dialog" width="1000">
+  <v-dialog v-model="viewDialog.dialog" :scroll-strategy="'none'" class="single-product-dialog" width="1000">
     <v-card>
       <v-toolbar color="white" class="dialog-product-toolbar">
         <v-btn @click="$emit('emit:close')" icon>
@@ -64,20 +66,8 @@ const viewProduct = async () => {
                   :spaceBetween="10" :navigation="true"
                   :loop="true" :modules="modules" class="mySwiper2"
                 >
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
+                  <swiper-slide v-for="img in carouselImg">
+                    <img :src="URL_IMG + img" width="100%" />
                   </swiper-slide>
                 </swiper>
               </div>
@@ -88,20 +78,8 @@ const viewProduct = async () => {
                   :loop="true" :spaceBetween="10" :slidesPerView="4"
                   :freeMode="true" :watchSlidesProgress="true" :modules="modules"
                 >
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
-                  </swiper-slide>
-                  <swiper-slide>
-                    <img :src="URL_IMG + product.image" width="100%" />
+                  <swiper-slide v-for="img in carouselImg">
+                    <img :src="URL_IMG + img" width="100%" />
                   </swiper-slide>
                 </swiper>
               </div>
