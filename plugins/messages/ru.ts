@@ -5,5 +5,7 @@ export default {
   news: 'Новости',
   contacts: 'Контакты',
   about: 'О компании',
-  back: 'Назад'
+  back: 'Назад',
+  sum: 'сум',
+  details: 'Подробнее'
 }

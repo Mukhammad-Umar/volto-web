@@ -7,76 +7,16 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-const productId = ref(0)
+const productId = ref('')
 const modules = [Navigation]
 const api: any = useNuxtApp().$api
 const viewDialog = reactive({ dialog: false })
 
 const products: any = ref([])
 
-// const products = ref([
-//   {
-//     id: 1,
-//     image: '/_nuxt/assets/images/popular-goods/tv-55.jpg',
-//     type: 'Телевизор',
-//     price: '4 989 000',
-//     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
-//     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
-//   },
-//   {
-//     id: 2,
-//     image: '/_nuxt/assets/images/popular-goods/tv-65.jpg',
-//     type: 'Телевизор',
-//     price: '5 999 000',
-//     description: 'Televizor VOLTO LED 65VUW-9000 Smart',
-//     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
-//   },
-//   {
-//     id: 3,
-//     image: '/_nuxt/assets/images/popular-goods/headphone.svg',
-//     type: 'Ноутбуки',
-//     price: '2 989 000',
-//     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
-//     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
-//   },
-//   {
-//     id: 4,
-//     image: '/_nuxt/assets/images/popular-goods/mouse.svg',
-//     type: 'Ноутбуки',
-//     price: '4 123 000',
-//     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
-//     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
-//   },
-//   {
-//     id: 5,
-//     image: '/_nuxt/assets/images/popular-goods/pc-headphone.svg',
-//     type: 'Ноутбуки',
-//     price: '1 433 000',
-//     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
-//     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
-//   },
-//   {
-//     id: 6,
-//     image: '/_nuxt/assets/images/popular-goods/watch2.svg',
-//     type: 'Ноутбуки',
-//     price: '4 989 000',
-//     description: '16.1" Ноутбук Honor MagicBook Pro HLYL-WFQ9 (53011FJC)',
-//     link: 'http://client-taqsim.crm24.uz/product/product-name-slug',
-//   },
-// ])
-
 async function getProducts() {
   const { data } = await api.get('api/products/getProducts')
   products.value = data
-}
-
-const viewProduct = async (id: number) => {
-  productId.value = id
-  viewDialog.dialog = true
-  
-  const { data } = await api.get(`api/products/getProductById/${id}`)
-  console.log(data);
-  
 }
 
 onMounted(() => {
@@ -116,11 +56,11 @@ onMounted(() => {
             </div>
 
             <div class="good-description mb-3">
-              <h6 class="text-info text-center mb-3">{{ filters.filterMoney(product.price) }} сўм</h6>
+              <h6 class="text-info text-center mb-3">{{ filters.filterMoney(product.price) }} {{ $t('sum') }}</h6>
             </div>
 
-            <v-btn class="product-item-btn br-10" @click="viewProduct(product.id)">
-              Подробнее
+            <v-btn class="product-item-btn br-10" @click="productId = product._id; viewDialog.dialog = true;">
+              {{ $t('details') }}
             </v-btn>
           </swiper-slide>
 

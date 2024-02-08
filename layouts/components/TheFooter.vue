@@ -79,7 +79,7 @@ const phoneNumber = ref('')
               <h3 class="footer_title">Связаться</h3>
               <form action="#" class="newsletter_form">
                 <input v-model="phoneNumber" type="text" placeholder="Введите номер телефона">
-                <button type="submit">Отправить</button>
+                <button type="button">Отправить</button>
               </form>
               <p class="newsletter_text">Отправьте нам свой номер телефона и наш оператор позвонит вам</p>
             </div>

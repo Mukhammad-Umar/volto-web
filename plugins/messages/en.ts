@@ -5,5 +5,7 @@ export default {
   news: 'News',
   contacts: 'Contacts',
   about: 'About',
-  back: 'Back'
+  back: 'Back',
+  sum: "so'm",
+  details: 'More details'
 }
