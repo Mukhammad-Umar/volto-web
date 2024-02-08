@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
+import { URL_IMG } from '@/defaults'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 // Import Swiper styles
@@ -10,38 +12,38 @@ import 'swiper/css/thumbs'
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper'
+import filters from '~/filters'
 
 const modules = [FreeMode, Navigation, Thumbs]
 
-const { productId, viewDialog }: any = defineProps<{
-  productId: Number
-  viewDialog: Object
-}>()
+const props: any = defineProps({ productId: String, viewDialog: Object })
 
+const { locale } = useI18n()
+const product: any = ref({})
 const thumbsSwiper = ref(null)
+const api: any = useNuxtApp().$api
+const viewDialog = ref(props.viewDialog)
 
-const productInfos = ref([
-  { label: 'Энергопотребление', value: 'A+' },
-  { label: 'Срок службы', value: '10 лет' },
-  { label: 'Разрешение экрана', value: '1366x768' },
-  { label: 'Потребляемая мощность', value: '45 Вт' },
-  { label: 'Ширина', value: '73 см' },
-  { label: 'Высота', value: '43.5 см' },
-  { label: 'Глубина', value: '9 см' },
-  { label: 'Вес', value: '4.36 кг' },
-])
+const productInfos: any = ref([])
 
-watch(() => viewDialog.dialog, val => {
+watch(() => props.viewDialog.dialog, val => {
   if (!val) setThumbsSwiper(null)
+  else viewProduct()
 })
 
 const setThumbsSwiper = (swiper: any) => {
   thumbsSwiper.value = swiper
 }
+
+const viewProduct = async () => {
+  const { data } = await api.get(`api/products/getProductById/${props.productId}`)
+  product.value = data
+  productInfos.value = product.value.characteristic_ru.split('. ')
+}
 </script>
 
 <template>
-  <v-dialog v-model="viewDialog.dialog" class="single-product-dialog" width="1000">
+  <v-dialog v-model="viewDialog.dialog" :scroll-strategy="'close'" class="single-product-dialog" width="1000">
     <v-card>
       <v-toolbar color="white" class="dialog-product-toolbar">
         <v-btn @click="$emit('emit:close')" icon>
@@ -63,19 +65,19 @@ const setThumbsSwiper = (swiper: any) => {
                   :loop="true" :modules="modules" class="mySwiper2"
                 >
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                 </swiper>
               </div>
@@ -87,19 +89,19 @@ const setThumbsSwiper = (swiper: any) => {
                   :freeMode="true" :watchSlidesProgress="true" :modules="modules"
                 >
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                   <swiper-slide>
-                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" width="100%" />
+                    <img :src="URL_IMG + product.image" width="100%" />
                   </swiper-slide>
                 </swiper>
               </div>
@@ -108,17 +110,13 @@ const setThumbsSwiper = (swiper: any) => {
 
           <v-col cols="12" lg="6" md="6" class="pt-0">
             <div class="quick-view-description">
-              <h4 class="product-name">Televizor VOLTO LED 65VUW-9000 Smart</h4>
+              <h4 class="product-name">{{ product.productName }}</h4>
               <div class="price d-flex align-center mt-2">
-                <div class="sale-price text-info">4 999 000 сум</div>
+                <div class="sale-price text-info">{{ filters.filterMoney(product.price) }} {{ $t('sum') }}</div>
                 <!-- <div class="old-price">5 999 000</div> -->
               </div>
               <p class="mt-2">
-                Lorem ipsum dolor sit amet, consectet adipisicing elit, sed do
-                eiusmod temporf incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis tyu nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                dolor in reprehenderit in voluptate.
+                {{ locale === 'ru' ? product.description_ru : locale === 'en' ? product.description_en : product.description_uz }}
               </p>
               <div class="product-buttons">
                 <v-btn rounded="lg" height="55" class="mr-4">
@@ -129,9 +127,11 @@ const setThumbsSwiper = (swiper: any) => {
                 </v-btn>
               </div>
               <div class="product-info">
-                <div v-for="info in productInfos" class="single-info">
-                  <span class="label">{{ info.label }}:</span>
-                  <span class="value">{{ info.value }}</span>
+                <div v-for="productInfo in productInfos" class="single-info">
+                  <span class="label">
+                    {{ productInfo?.split(': ')[0] }}{{ productInfo?.includes(': ') ? ':' : '' }}
+                  </span>
+                  <span class="value">{{ productInfo?.split(': ')[1] }}</span>
                 </div>
               </div>
             </div>
@@ -146,6 +146,10 @@ const setThumbsSwiper = (swiper: any) => {
 .dialog-product-toolbar .v-toolbar__content {
   display: flex;
   justify-content: flex-end;
+}
+
+.swiper-wrapper {
+  align-items: center;
 }
 
 @media (max-width: 960px) {
