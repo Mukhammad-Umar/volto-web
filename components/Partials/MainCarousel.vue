@@ -1,9 +1,12 @@
 <script setup lang="ts">
+
+const url = window?.location.origin
+
 const slides = ref([
-  { image: '/_nuxt/assets/images/carousel/artel-tv.png' },
-  { image: '/_nuxt/assets/images/carousel/hoffman-tv.jpg' },
-  { image: '/_nuxt/assets/images/carousel/hoffman-wash.jpg' },
-  { image: '/_nuxt/assets/images/carousel/artel-fridge.jpg' },
+  { image: '/images/carousel/artel-tv.png' },
+  { image: '/images/carousel/hoffman-tv.jpg' },
+  { image: '/images/carousel/hoffman-wash.jpg' },
+  { image: '/images/carousel/artel-fridge.jpg' },
 ])
 </script>
 
@@ -13,7 +16,7 @@ const slides = ref([
 
     <v-carousel class="main-carousel" height="auto" hide-delimiter-background cover> <!-- cycle -->
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
-        <v-img :src="slide.image" max-width="91%" class="main-carousel-img mt-7 mb-13 mx-auto" />
+        <v-img :src="url + slide.image" max-width="91%" class="main-carousel-img mt-7 mb-13 mx-auto" />
       </v-carousel-item>
     </v-carousel>
 

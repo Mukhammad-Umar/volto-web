@@ -5,7 +5,7 @@
     <v-row class="mt-0 mb-3 d-flex justify-center">
       <v-col cols="12" xl="8" lg="9">
         <div class="news-details-wrapper">
-          <v-img src="@/assets/images/news/news2.svg" class="mx-auto" />
+          <v-img src="/assets/images/news/news2.svg" class="mx-auto" />
           <div class="news-info">
             <v-btn class="text-none text-grey" variant="text" rounded="lg" border @click="$router.back()">
               <v-icon color="grey" class="mr-1">mdi-arrow-u-left-top</v-icon>

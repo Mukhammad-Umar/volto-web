@@ -33,7 +33,7 @@ const phoneNumber = ref('')
             <div class="footer_widget footer_middle_left">
               <div class="footer_logo d-flex">
                 <a href="#">
-                  <v-img :src="'/_nuxt/assets/images/volto.jpg'" width="100" />
+                  <v-img src="/assets/images/volto.jpg" width="100" />
                 </a>
               </div>
               <div class="footer_right_bottom">
@@ -55,7 +55,7 @@ const phoneNumber = ref('')
                     </li>
                     <li>
                       <a href="https://t.me/VoltoUzbekistan" target="_blank" class="flex-center">
-                        <v-img :src="'/_nuxt/assets/images/socials/tg.svg'" max-width="19" class="ti-twitter-alt" />
+                        <v-img src="/assets/images/socials/tg.svg" max-width="19" class="ti-twitter-alt" />
                       </a>
                     </li>
                   </ul>
