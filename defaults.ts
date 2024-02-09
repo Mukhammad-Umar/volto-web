@@ -1,6 +1,6 @@
 /*____________________ Server ____________________*/
 export const URL_BASE = '/';
-export const URL_IMG = '/files/';
+export const URL_IMG = '/images/';
 
 
 /*____________________ Test Local ____________________*/

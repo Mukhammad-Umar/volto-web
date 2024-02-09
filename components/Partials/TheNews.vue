@@ -5,34 +5,38 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
+import News1 from '/assets/images/news/news1.svg'
+import News2 from '/assets/images/news/news2.svg'
+import News3 from '/assets/images/news/news3.svg'
+import News4 from '/assets/images/news/news3.svg'
+
 const modules = [Navigation]
-const url = window?.location.origin
 
 const news = ref([
   {
     id: 1,
-    image: '/images/news/news1.svg',
+    image: News1,
     title: 'Заголовок новости!',
     description: 'Задача организации, в особенности же рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! сложившаяся структура...',
     date: '29 август 2023',
   },
   {
     id: 2,
-    image: '/images/news/news2.svg',
+    image: News2,
     title: 'Заголовок новости!',
     description: 'Задача организации, в особенности же рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! сложившаяся структура...',
     date: '24 август 2023',
   },
   {
     id: 3,
-    image: '/images/news/news3.svg',
+    image: News3,
     title: 'Заголовок новости!',
     description: 'Задача организации, в особенности же рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! сложившаяся структура...',
     date: '10 август 2023',
   },
   {
     id: 4,
-    image: '/images/news/news3.svg',
+    image: News4,
     title: 'Заголовок новости!',
     description: 'Задача организации, в особенности же рамки и место обучения кадров играет важную роль в формировании направлений прогрессивного развития. Товарищи! сложившаяся структура...',
     date: '10 август 2023',
@@ -70,7 +74,7 @@ const threeDots = (text) => {
             class="pa-5 news-content-item d-flex flex-nowrap flex-column justify-space-between br-10"
           >
             <div class="d-flex flex-column align-center">
-              <v-img :src="url + oneNews.image" width="352px" height="210px" />
+              <v-img :src="oneNews.image" width="352px" height="210px" />
               <h5>{{ oneNews.title }}</h5>
               <p>
                 {{ threeDots(oneNews.description) }}

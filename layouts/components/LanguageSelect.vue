@@ -1,13 +1,16 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
 
+import Us from '/assets/images/flags/us.svg'
+import Ru from '/assets/images/flags/ru.svg'
+import Uz from '/assets/images/flags/uz.svg'
+
 const { locale } = useI18n()
-const url = window?.location.origin
 
 const languages = ref([
-  { flag: '/images/flags/us.svg', language: 'en', title: 'English' },
-  { flag: '/images/flags/ru.svg', language: 'ru', title: 'Русский' },
-  { flag: '/images/flags/uz.svg', language: 'uz', title: 'O`zbekcha' },
+  { flag: Us, language: 'en', title: 'English' },
+  { flag: Ru, language: 'ru', title: 'Русский' },
+  { flag: Uz, language: 'uz', title: 'O`zbekcha' },
 ])
 
 const langsFilter = computed(() => {
@@ -28,7 +31,7 @@ const setLanguage = (lang: string) => {
           <img
             v-if="lang.language === locale" :key="index"
             id="header-lang-img" height="20"
-            :src="url + lang.flag" :alt="lang.title" class="rounded"
+            :src="lang.flag" :alt="lang.title" class="rounded"
           />
         </template>
       </v-btn>
@@ -39,7 +42,7 @@ const setLanguage = (lang: string) => {
         @click="setLanguage(lang.language)"
       >
         <div class="d-flex align-center">
-          <img :src="url + lang.flag" alt="user-image" class="me-2 rounded" height="18" />
+          <img :src="lang.flag" alt="user-image" class="me-2 rounded" height="18" />
           {{ lang.title }}
         </div>
       </v-list-item>

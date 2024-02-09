@@ -98,10 +98,10 @@ const viewProduct = async () => {
               </p>
               <div class="product-buttons">
                 <v-btn rounded="lg" height="55" class="mr-4">
-                  <v-img :src="'/_nuxt/assets/images/pay-systems/payme.svg'" width="100" />
+                  <v-img src="/assets/images/pay-systems/payme.svg" width="100" />
                 </v-btn>
                 <v-btn rounded="lg" height="55">
-                  <v-img :src="'/_nuxt/assets/images/pay-systems/uzum.svg'" width="100" />
+                  <v-img src="/assets/images/pay-systems/uzum.svg" width="100" />
                 </v-btn>
               </div>
               <div class="product-info">
