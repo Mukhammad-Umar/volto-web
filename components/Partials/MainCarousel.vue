@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import ArtelTv from '/assets/images/carousel/artel-tv.png'
+import VoltoTv from '/assets/images/carousel/volto-tv.png'
 import HoffmanTv from '/assets/images/carousel/hoffman-tv.jpg'
 import HoffmanWash from '/assets/images/carousel/hoffman-wash.jpg'
 import ArtelFridge from '/assets/images/carousel/artel-fridge.jpg'
 
 const slides = ref([
-  { image: ArtelTv },
+  { image: VoltoTv },
   { image: HoffmanTv },
   { image: HoffmanWash },
   { image: ArtelFridge },
