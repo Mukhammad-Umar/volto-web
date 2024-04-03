@@ -12,14 +12,16 @@ const phoneNumber = ref('')
               <div class="query_text">
                 <h3>
                   У вас есть вопрос? <br />
-                  <a href="#">Позвоните</a> нам
+                  <a href="tel: +998335773333">Позвоните</a> нам
                 </h3>
+                <h4>Единый сервисный центр</h4>
               </div>
             </v-col>
             <v-col cols="6">
               <div class="query_number">
-                <h3>+998 99 999 88 88</h3>
-                <p><a href="#">support@gmail.com</a></p>
+                <h3><a href="tel: +998335773333">+998 33 577 33 33</a></h3>
+                <p><a href="mailto:volto.uzbekistan@mail.ru">volto.uzbekistan@mail.ru</a></p>
+                <h4 class="mt-4"><a href="tel: +998993730303">+998 99 373 03 03</a></h4>
               </div>
             </v-col>
           </v-row>
