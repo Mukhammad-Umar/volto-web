@@ -1,18 +1,21 @@
 <script lang="ts" setup>
 import filters from "@/filters"
-import { URL_IMG } from '@/defaults'
+import { useI18n } from 'vue-i18n'
 import { Navigation } from 'swiper'
+import { URL_IMG } from '@/defaults'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { PRODUCTS } from "@/utils/constants"
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-const productId = ref('')
+const productId = ref(0)
 const modules = [Navigation]
+const { locale } = useI18n()
 const api: any = useNuxtApp().$api
-const viewDialog = reactive({ dialog: false })
 
 const products: any = ref([])
+const viewDialog = reactive({ dialog: false })
 
 async function getProducts() {
   const { data } = await api.get('api/products/getProducts')
@@ -41,25 +44,27 @@ onMounted(() => {
         >
           <swiper-slide
             class="slide popular-goods pa-4 d-flex flex-nowrap flex-column justify-space-around"
-            v-for="(product, index) in products" :key="index"
+            v-for="(product, index) in PRODUCTS" :key="index"
           >
             <!-- <div class="title d-flex align-center">
               <span class="ml-3">{{ product.type }}</span>
             </div> -->
 
             <div class="good-image w-100 flex-center">
-              <v-img :src="URL_IMG + product.image" />
+              <v-img :src="'/assets/images/products/' + product.image" />
             </div>
 
             <div class="good-description mb-3">
-              <h5 class="text-center">{{ product.productName }}</h5>
+              <h5 class="text-center">
+                {{ locale === 'ru' ? product.name_ru : product.name_uz }}
+              </h5>
             </div>
 
             <div class="good-description mb-3">
               <h6 class="text-info text-center mb-3">{{ filters.filterMoney(product.price) }} {{ $t('sum') }}</h6>
             </div>
 
-            <v-btn class="product-item-btn br-10" @click="productId = product._id; viewDialog.dialog = true;">
+            <v-btn class="product-item-btn br-10" @click="productId = product.id; viewDialog.dialog = true;">
               {{ $t('details') }}
             </v-btn>
           </swiper-slide>

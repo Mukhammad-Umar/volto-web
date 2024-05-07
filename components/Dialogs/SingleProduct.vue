@@ -16,7 +16,7 @@ import filters from '~/filters'
 
 const modules = [FreeMode, Navigation, Thumbs]
 
-const props: any = defineProps({ productId: String, viewDialog: Object })
+const props: any = defineProps({ productId: Number, viewDialog: Object })
 
 const { locale } = useI18n()
 const product: any = ref({})
